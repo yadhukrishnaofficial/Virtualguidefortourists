@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, Admin</h1>
+
+    <h2>Restaurants</h2>
+    <a href="{% url 'add_restaurant' %}">Add New Restaurant</a>
+    <ul>
+        {% for restaurant in restaurants %}
+            <li>
+                <img src="{{ restaurant.image }}" alt="{{ restaurant.name }}" width="100">
+                <strong>{{ restaurant.name }}</strong> - {{ restaurant.address }}
+                <a href="{% url 'edit_restaurant' restaurant.id %}">Edit</a>
+                <a href="{% url 'delete_restaurant' restaurant.id %}" onclick="return confirm('Are you sure?');">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Tourist Spots</h2>
+    <a href="{% url 'add_tourist_spot' %}">Add New Tourist Spot</a>
+    <ul>
+        {% for spot in tourist_spots %}
+            <li>
+                <img src="{{ spot.image }}" alt="{{ spot.name }}" width="100">
+                <strong>{{ spot.name }}</strong> - {{ spot.address }}
+                <a href="{% url 'edit_tourist_spot' spot.id %}">Edit</a>
+                <a href="{% url 'delete_tourist_spot' spot.id %}" onclick="return confirm('Are you sure?');">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

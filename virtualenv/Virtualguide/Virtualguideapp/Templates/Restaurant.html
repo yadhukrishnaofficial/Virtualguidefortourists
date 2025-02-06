@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Tourist Guide</title>
-    <style>
+    <title>Restaurants - Virtual Tourist Guide</title>
+    <!-- Same CSS as index.html -->
+</head>
+<body>
+   <style>
         :root {
             --primary-green: #2ecc71;
             --dark-green: #27ae60;
@@ -168,39 +171,28 @@
             margin: 0 auto;
         }
     </style>
-</head>
-<body>
     <nav class="navbar">
         <a href="index.html" class="logo">TourGuide</a>
         <div class="nav-buttons">
-            <a href="login/" class="btn btn-outline">Login</a>
-            <a href="signup/" class="btn btn-primary">Sign Up</a>
-            <a href="login_admin" class="btn btn-outline">Admin</a>
+            <a href="profile.html" class="btn btn-outline">My Profile</a>
+            <a href="index.html" class="btn btn-primary">Logout</a>
         </div>
     </nav>
 
     <div class="container">
-        <div class="welcome-section">
-            <h1>Welcome to Virtual Tourist Guide</h1>
-            <p>Discover amazing places and experiences in your area</p>
-        </div>
-
-        <h2 class="section-title">Explore Places</h2>
+        <h2 class="section-title">Nearby Restaurants</h2>
         <div class="card-container">
+            <!-- Restaurant cards will be dynamically added here -->
             <div class="card">
-                <h3>Restaurants</h3>
-                <p>Discover local cuisine and dining experiences near you.</p>
+                <h3>Italian Restaurant</h3>
+                <p>Authentic Italian cuisine in a cozy atmosphere.</p>
+                <p><strong>Location:</strong> 123 Main St</p>
+                <p><strong>Cuisine:</strong> Italian</p>
                 <div class="card-footer">
-                    <a href="view_restaurant" class="btn btn-outline">View All</a>
+                    <a href="#" class="btn btn-outline">View Details</a>
                 </div>
             </div>
-            <div class="card">
-                <h3>Tourist Spots</h3>
-                <p>Explore popular attractions and hidden gems in your area.</p>
-                <div class="card-footer">
-                    <a href="tourist-spots.html" class="btn btn-outline">View All</a>
-                </div>
-            </div>
+            <!-- More restaurant cards -->
         </div>
     </div>
 </body>

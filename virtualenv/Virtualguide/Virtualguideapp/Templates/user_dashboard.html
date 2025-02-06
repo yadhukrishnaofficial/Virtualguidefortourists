@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ user.username }}</h1>
+
+    <h2>Restaurants</h2>
+    <ul>
+        {% for restaurant in restaurants %}
+            <li>
+                <img src="{{ restaurant.image }}" alt="{{ restaurant.name }}" width="100">
+                <strong>{{ restaurant.name }}</strong> - {{ restaurant.address }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Tourist Spots</h2>
+    <ul>
+        {% for spot in tourist_spots %}
+            <li>
+                <img src="{{ spot.image }}" alt="{{ spot.name }}" width="100">
+                <strong>{{ spot.name }}</strong> - {{ spot.address }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
